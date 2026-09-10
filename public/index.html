@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yamzz Market</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/"><span class="brand-dot"></span> Yamzz Market</a>
+<nav><a href="#produk">Produk</a><a href="#panduan">Panduan</a><button class="btn ghost" id="accountBtn">Login</button></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="badge">Marketplace digital • Yamzz Market</span>
+    <h1>Semua kebutuhan digital,<br><span>dalam satu tempat.</span></h1>
+    <p>Temukan berbagai produk dan layanan digital dengan proses yang mudah, cepat, dan nyaman.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#produk">Lihat Produk</a>
+      <button class="btn dark" id="heroLogin">Mulai Sekarang</button>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="mini-label">Saldo akun</div>
+    <div class="big-number" id="heroBalance">Rp 0</div>
+    <div class="mini-row"><span>Status</span><strong id="heroStatus">Belum login</strong></div>
+  </div>
+</section>
+
+<section id="produk" class="section home-products">
+  <div class="section-head">
+    <div><span class="eyebrow">Marketplace</span><h2>Produk & Layanan</h2></div>
+    <p>Pilih produk yang ingin kamu gunakan.</p>
+  </div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section id="panduan" class="section muted home-guide">
+  <div class="section-head">
+    <div><span class="eyebrow">Pusat Bantuan</span><h2>Cara Menggunakan Yamzz Market</h2></div>
+    <p>Panduan singkat agar transaksi lebih mudah dan aman.</p>
+  </div>
+
+  <div class="guide-grid">
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">account_balance_wallet</span></div><div><span class="guide-number">01</span><h3>Cara Isi Saldo</h3><p>Buka menu <b>Saldo</b>, masukkan nominal deposit, buat pembayaran, lalu selesaikan pembayaran. Saldo akan diproses setelah pembayaran terverifikasi.</p></div></article>
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">shopping_cart</span></div><div><span class="guide-number">02</span><h3>Cara Melakukan Pembelian</h3><p>Pilih kategori produk, buka layanan yang diinginkan, pilih produk, lalu ikuti instruksi pembelian. Pastikan saldo dan data tujuan sudah benar sebelum checkout.</p></div></article>
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">receipt_long</span></div><div><span class="guide-number">03</span><h3>Cara Cek Transaksi</h3><p>Buka menu <b>Transaksi</b> untuk melihat riwayat pesanan dan status transaksi.</p></div></article>
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">support_agent</span></div><div><span class="guide-number">04</span><h3>Cara Melaporkan Kendala</h3><p>Siapkan ID transaksi dan kronologi singkat, lalu hubungi <b>CS Yamzz Market</b> melalui kontak yang tersedia di halaman <b>Tentang</b>.</p></div></article>
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">person</span></div><div><span class="guide-number">05</span><h3>Cara Mengatur Akun</h3><p>Gunakan menu <b>Akun</b> untuk memperbarui username, email, dan password. Jaga kerahasiaan data login.</p></div></article>
+    <article class="guide-card"><div class="guide-icon"><span class="material-symbols-rounded">verified_user</span></div><div><span class="guide-number">06</span><h3>Tips Transaksi Aman</h3><p>Periksa kembali produk dan data tujuan sebelum membeli. Simpan bukti pembayaran dan gunakan metode pembayaran resmi Yamzz Market.</p></div></article>
+  </div>
+</section>
+</main>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<script src="/app.js"></script>
+
+<nav class="bottom-nav" aria-label="Navigasi utama">
+  <a href="index.html" data-nav="home"><span class="material-symbols-rounded">home</span><span>Beranda</span></a>
+  <a href="ppob.html" data-nav="products"><span class="material-symbols-rounded">shopping_bag</span><span>Produk</span></a>
+  <a href="deposit.html" data-nav="balance"><span class="material-symbols-rounded">account_balance_wallet</span><span>Saldo</span></a>
+  <a href="transactions.html" data-nav="transactions"><span class="material-symbols-rounded">receipt_long</span><span>Transaksi</span></a>
+  <a href="about.html" data-nav="about"><span class="material-symbols-rounded">info</span><span>Tentang</span></a>
+  <a href="profile.html" data-nav="account"><span class="material-symbols-rounded">person</span><span>Akun</span></a>
+</nav>
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  const map = {'index.html':'home','':'home','ppob.html':'products','jasteb.html':'products','hosting.html':'products','aplikasi-jb.html':'products','deposit.html':'balance','transactions.html':'transactions','profile.html':'account','about.html':'about'};
+  const active = map[path] || 'home';
+  document.querySelectorAll('.bottom-nav a').forEach(function(a){if(a.dataset.nav===active)a.classList.add('active');});
+})();
+</script>
+<script src="/site.js"></script>
+</body></html>

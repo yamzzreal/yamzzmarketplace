@@ -1,0 +1,52 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aplikasi JB - Yamzz Market</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200">
+</head><body><header class="topbar"><a class="brand" href="/">● Yamzz Market</a><nav><a href="/">Beranda</a><button class="btn ghost" onclick="location.href='/'">Akun</button></nav></header><main class="section"><span class="eyebrow">Yamzz Market</span><h1 style="font-size:48px">🛒 Aplikasi JB</h1><p style="color:#667085;max-width:650px;line-height:1.7">Aplikasi dan kebutuhan jual-beli digital.</p><div class="features" style="margin-top:30px"><div><b>🛒</b><h3>Katalog Aplikasi JB</h3><p>Pilih layanan yang tersedia dan ikuti petunjuk pembelian.</p></div><div><b>🔐</b><h3>Akun pelanggan</h3><p>Login untuk saldo dan transaksi.</p></div><div><b>💳</b><h3>Deposit</h3><p>Top up saldo melalui QRIS.</p></div></div></main>
+<nav class="bottom-nav" aria-label="Navigasi utama">
+  <a href="index.html" data-nav="home">
+    <span class="material-symbols-rounded">home</span>
+    <span>Beranda</span>
+  </a>
+  <a href="ppob.html" data-nav="products">
+    <span class="material-symbols-rounded">shopping_bag</span>
+    <span>Produk</span>
+  </a>
+  <a href="deposit.html" data-nav="balance">
+    <span class="material-symbols-rounded">account_balance_wallet</span>
+    <span>Saldo</span>
+  </a>
+  <a href="transactions.html" data-nav="transactions">
+    <span class="material-symbols-rounded">receipt_long</span>
+    <span>Transaksi</span>
+  </a>  <a href="about.html" data-nav="about">
+    <span class="material-symbols-rounded">info</span>
+    <span>Tentang</span>
+  </a>
+
+  <a href="profile.html" data-nav="account">
+    <span class="material-symbols-rounded">person</span>
+    <span>Akun</span>
+  </a>
+</nav>
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  const map = {
+    'index.html':'home',
+    '':'home',
+    'ppob.html':'products',
+    'jasteb.html':'products',
+    'hosting.html':'products',
+    'aplikasi-jb.html':'products',
+    'deposit.html':'balance',
+    'transactions.html':'transactions',
+    'profile.html':'account',
+    'about.html':'about'
+  };
+  const active = map[path] || 'home';
+  document.querySelectorAll('.bottom-nav a').forEach(function(a){
+    if(a.dataset.nav === active) a.classList.add('active');
+  });
+})();
+</script>
+
+<script src="/site.js"></script>
+</body></html>

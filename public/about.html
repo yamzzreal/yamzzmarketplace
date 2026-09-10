@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tentang Kami - Yamzz Market</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200">
+<style>
+.about-wrap{max-width:1050px;margin:auto;padding:30px 18px 35px}
+.about-hero{position:relative;overflow:hidden;padding:42px 26px;border:1px solid rgba(50,215,255,.2);border-radius:26px;background:linear-gradient(135deg,rgba(5,26,55,.96),rgba(3,11,28,.96));box-shadow:0 20px 70px rgba(0,0,0,.35),0 0 40px rgba(0,180,255,.08);text-align:center}
+.about-hero:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(0,200,255,.13);filter:blur(50px);top:-130px;left:50%;transform:translateX(-50%)}
+.about-logo{position:relative;width:75px;height:75px;object-fit:contain;border-radius:20px;margin-bottom:12px;filter:drop-shadow(0 0 18px rgba(0,210,255,.45))}
+.about-icon{position:relative;font-size:64px;color:#42ddff;text-shadow:0 0 24px #00bfff}
+.about-hero h1{position:relative;margin:7px 0 10px;font-size:34px}
+.about-hero p{position:relative;max-width:720px;margin:auto;color:#9ab1cd;line-height:1.75}
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:16px}
+.about-card{padding:21px;border-radius:19px;background:rgba(7,18,39,.75);border:1px solid rgba(57,205,255,.13);box-shadow:0 12px 40px rgba(0,0,0,.22)}
+.about-card h2{display:flex;align-items:center;gap:9px;margin:0 0 12px;font-size:17px}
+.about-card h2 .material-symbols-rounded{color:#3edbff}
+.about-card p,.about-card li{color:#91a8c4;line-height:1.7;font-size:13px}
+.about-card ul{padding-left:19px;margin:0}
+.social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.social-link{display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;background:rgba(0,190,255,.055);border:1px solid rgba(55,210,255,.1);color:#dceeff;text-decoration:none;transition:.2s}
+.social-link:hover{border-color:rgba(55,210,255,.3);background:rgba(0,190,255,.1);transform:translateY(-1px)}
+.social-link .material-symbols-rounded{color:#3edbff}
+.contact-list{display:grid;gap:9px}
+.contact-item{display:flex;align-items:center;gap:11px;padding:12px;border-radius:12px;background:#061329}
+.contact-item .material-symbols-rounded{color:#3edbff}
+.contact-item small{display:block;color:#718aa7;font-size:10px;margin-bottom:2px}
+.contact-item b{font-size:12px;color:#dceeff;word-break:break-word}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.about-hero{padding:34px 18px}.about-hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<main class="about-wrap">
+<section class="about-hero">
+  <img id="aboutLogo" class="about-logo" style="display:none" alt="Yamzz Market">
+  <span id="aboutIcon" class="material-symbols-rounded about-icon">storefront</span>
+  <h1>Tentang Yamzz Market</h1>
+  <p id="aboutTagline">Marketplace digital untuk berbagai kebutuhan layanan online, dengan pengalaman yang cepat, praktis, dan mudah digunakan.</p>
+</section>
+
+<div class="about-grid">
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">info</span>Tentang Website</h2>
+    <p id="aboutDescription">Yamzz Market adalah platform marketplace digital yang menyediakan berbagai layanan online dalam satu tempat. Website ini dirancang agar pelanggan dapat menemukan produk, melakukan transaksi, memeriksa saldo, dan melihat riwayat transaksi dengan lebih mudah.</p>
+  </section>
+
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">verified</span>Layanan Yamzz Market</h2>
+    <ul>
+      <li>PPOB & pulsa</li>
+      <li>Jasteb</li>
+      <li>Hosting</li>
+      <li>Aplikasi JB</li>
+      <li>Berbagai produk digital lainnya</li>
+    </ul>
+  </section>
+
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">share</span>Sosial Media</h2>
+    <div class="social-grid" id="socialList"></div>
+    <p class="hint" id="socialHint" style="margin-top:10px">Sosial media dapat diatur oleh admin melalui panel website.</p>
+  </section>
+
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">support_agent</span>Customer Service</h2>
+    <div class="contact-list">
+      <a id="waLink" class="contact-item" href="#" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="material-symbols-rounded">chat</span><div><small>WhatsApp CS</small><b id="waText">Belum diatur</b></div>
+      </a>
+      <a id="emailLink" class="contact-item" href="#" style="text-decoration:none">
+        <span class="material-symbols-rounded">mail</span><div><small>Email CS</small><b id="emailText">Belum diatur</b></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">security</span>Keamanan & Kenyamanan</h2>
+    <p>Jaga kerahasiaan password akun dan jangan pernah memberikan kode OTP atau data login kepada pihak lain. Jika menemukan kendala transaksi, hubungi CS melalui kontak resmi yang tersedia di halaman ini.</p>
+  </section>
+
+  <section class="about-card">
+    <h2><span class="material-symbols-rounded">contact_support</span>Butuh Bantuan?</h2>
+    <p>Gunakan WhatsApp atau email CS untuk pertanyaan mengenai produk, pembayaran, transaksi, saldo, atau kendala lainnya.</p>
+  </section>
+</div>
+</main>
+<script src="/site.js"></script>
+<script>
+(async function(){
+  try{
+    const r=await fetch("/api/settings"); const d=await r.json(); const s=d.settings||{};
+    if(s.logo_url){document.getElementById("aboutLogo").src=s.logo_url;document.getElementById("aboutLogo").style.display="inline-block";document.getElementById("aboutIcon").style.display="none"}
+    if(s.tagline)document.getElementById("aboutTagline").textContent=s.tagline;
+    const wa=(s.support_whatsapp||"").replace(/\D/g,"");
+    if(wa){document.getElementById("waText").textContent="+"+wa;document.getElementById("waLink").href="https://wa.me/"+wa}
+    const em=s.support_email||"";
+    if(em){document.getElementById("emailText").textContent=em;document.getElementById("emailLink").href="mailto:"+em}
+    const socials=s.social_media||{};
+    const labels={instagram:"Instagram",youtube:"YouTube",tiktok:"TikTok",telegram:"Telegram",facebook:"Facebook",x:"X / Twitter"};
+    const icons={instagram:"photo_camera",youtube:"play_circle",tiktok:"music_note",telegram:"send",facebook:"thumb_up",x:"tag"};
+    const arr=Object.entries(labels).filter(([k])=>socials[k]).map(([k,label])=>`<a class="social-link" href="${esc(socials[k])}" target="_blank" rel="noopener"><span class="material-symbols-rounded">${icons[k]}</span>${label}</a>`).join("");
+    document.getElementById("socialList").innerHTML=arr||'<div class="hint">Belum ada sosial media yang diatur.</div>';
+  }catch(e){}
+  function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+})();
+</script>
+</body>
+</html>
