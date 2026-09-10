@@ -1,0 +1,67 @@
+{
+  "users": [],
+  "products": [
+    {
+      "id": "ppob-001",
+      "category": "ppob",
+      "name": "PPOB & Pulsa",
+      "description": "Pulsa, paket data, token dan kebutuhan PPOB.",
+      "price": 0,
+      "active": true
+    },
+    {
+      "id": "jasteb-001",
+      "category": "jasteb",
+      "name": "Jasteb",
+      "description": "Layanan jasteb Yamzz Market.",
+      "price": 0,
+      "active": true
+    },
+    {
+      "id": "hosting-001",
+      "category": "hosting",
+      "name": "Hosting",
+      "description": "Hosting dan kebutuhan website.",
+      "price": 0,
+      "active": true
+    },
+    {
+      "id": "jb-001",
+      "category": "aplikasi-jb",
+      "name": "Aplikasi JB",
+      "description": "Aplikasi dan kebutuhan jual-beli digital.",
+      "price": 0,
+      "active": true
+    }
+  ],
+  "transactions": [],
+  "deposits": [],
+  "settings": {
+    "store_name": "Yamzz Market",
+    "currency": "IDR",
+    "tagline": "PPOB, Jasteb, Hosting & layanan digital dalam satu tempat.",
+    "logo_url": "",
+    "favicon_url": "",
+    "maintenance": false,
+    "maintenance_message": "Website sedang dalam perbaikan. Silakan kembali beberapa saat lagi.",
+    "ticker_enabled": true,
+    "ticker_messages": [
+      "Selamat datang di Yamzz Market!",
+      "Transaksi aman dan cepat.",
+      "Gunakan menu di bawah untuk akses lebih mudah."
+    ],
+    "banners": [],
+    "support_whatsapp": "",
+    "support_email": "",
+    "footer_text": "© Yamzz Market • Marketplace Digital",
+    "social_media": {
+      "instagram": "",
+      "youtube": "",
+      "tiktok": "",
+      "telegram": "",
+      "facebook": "",
+      "x": ""
+    }
+  },
+  "resetRequests": []
+}
