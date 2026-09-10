@@ -1,0 +1,1 @@
+const {bin}=require("./_lib");module.exports=async(req,res)=>{try{const db=await bin();res.json({products:(db.products||[]).filter(x=>x.active!==false)})}catch(e){res.status(500).json({error:e.message})}};

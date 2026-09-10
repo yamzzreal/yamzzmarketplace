@@ -1,0 +1,1 @@
+module.exports=(req,res)=>{res.setHeader("Set-Cookie","__Host-yamzz=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0");res.json({ok:true})};

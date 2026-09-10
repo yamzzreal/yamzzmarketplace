@@ -1,0 +1,1 @@
+const {bin,userId}=require("./_lib");module.exports=async(req,res)=>{try{const id=userId(req);if(!id)return res.status(401).json({error:"Silakan login."});const db=await bin();res.json({transactions:(db.transactions||[]).filter(x=>x.userId===id).slice(-50).reverse()})}catch(e){res.status(500).json({error:e.message})}};
