@@ -18,7 +18,7 @@ Tidak memakai Express/server terpisah. API berjalan sebagai Vercel Serverless Fu
 5. Deploy.
 
 Webhook Casaku:
-`https://DOMAIN-VERCEL-KAMU/webhook/casaku`
+`https://DOMAIN-VERCEL-KAMU/api/webhook/casaku`
 
 ## Penting
 JSONBin adalah document storage dan bukan database transaksional. Untuk project kecil/starter ini cukup, tetapi saldo dan order skala besar sebaiknya memakai DB transaksional.
@@ -54,6 +54,30 @@ Jangan memasukkan password admin ke file frontend atau JSONBin. Simpan hanya di 
 ## TENTANG WEBSITE
 
 Navbar bawah sekarang memiliki menu **Tentang** yang menuju `/about.html`.
+
+Halaman Tentang menampilkan:
+- Penjelasan Yamzz Market
+- Daftar layanan
+- Sosial media resmi
+- WhatsApp CS
+- Email CS
+- Informasi keamanan dan bantuan
+
+Semua kontak dan sosial media dapat diubah dari **Admin Panel → Tampilan**.
+
+## Manajemen Pelanggan & Lupa Password
+Admin Panel kini memiliki menu **Pelanggan** untuk mencari username/email, melihat saldo, jumlah transaksi, status akun, serta mengubah saldo, status akun, dan password baru tanpa pernah menampilkan password lama.
+
+Pada popup Login pelanggan tersedia **Lupa password?**. Pelanggan mengisi username + email. Jika cocok, sistem membuat token reset sekali pakai yang berlaku 30 menit. Link reset tidak dikirim otomatis ke pelanggan; admin mengambil link tersebut dari panel dan mengirimkannya secara manual.
+
+
+### Notifikasi Telegram Reset Sandi
+Isi environment variables berikut agar setiap permintaan lupa sandi yang cocok memberi notifikasi ke Telegram admin:
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+- `APP_URL`
+
+Tidak ada pengiriman email otomatis dari sistem. Link reset hanya dapat diambil oleh admin yang sudah login dan kemudian dikirim manual kepada pelanggan.
 
 Halaman Tentang menampilkan:
 - Penjelasan Yamzz Market
